@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
+import { DadosService } from './dados.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,7 +9,10 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DashboardComponent ],
+      providers: [
+        DadosService
+      ]
     })
     .compileComponents();
 
@@ -20,4 +24,6 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });
